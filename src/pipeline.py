@@ -44,8 +44,8 @@ def make_models() -> dict:
       "elasticnet": build_pipeline(ElasticNetCV(l1_ratio=[0.3, 0.6, 0.9], alphas=alphas[:20], cv=5,
                                                 max_iter=50_000, random_state=RANDOM_STATE)),
       "gbr": build_pipeline(GradientBoostingRegressor(
-         n_estimators=1000, learning_rate=0.03, max_depth=4, max_features="sqrt",
-         min_samples_leaf=15, min_samples_split=10, loss="huber", random_state=RANDOM_STATE), scale=False),
+         n_estimators=1000, learning_rate=0.04475983459259064, max_depth=2, max_features="sqrt",
+         min_samples_leaf=6, min_samples_split=10, loss="huber", random_state=RANDOM_STATE), scale=False),
       "forest": build_pipeline(RandomForestRegressor(
       n_estimators=300, max_features=0.33, min_samples_leaf=2,
       n_jobs=-1, random_state=RANDOM_STATE), scale=False),
